@@ -3,7 +3,4 @@ Host *
 	UserKnownHostsFile=/dev/null
 	StrictHostKeyChecking no
 
-Host github.com
-	HostName github.com
-
 Include ~/.ssh/config.d/*
