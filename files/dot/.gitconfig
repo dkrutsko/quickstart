@@ -12,8 +12,6 @@
   status = auto
 [init]
   defaultBranch = main
-[merge]
-  tool = kdiff3
 [difftool]
   prompt = false
 [alias]
