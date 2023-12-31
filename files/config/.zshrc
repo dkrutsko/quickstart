@@ -74,8 +74,8 @@ export PATH="/opt/homebrew/opt/curl/bin:${PATH}"
 
 ##----------------------------------------------------------------------------##
 
-# If nvm has been loaded into environment
-if ! command -v nvm > /dev/null 2>&1; then
+# Check if nvm has been installed
+if brew list nvm &> /dev/null; then
 
 	# Export NVM directory
 	export NVM_DIR="/opt/homebrew/opt/nvm"
@@ -90,8 +90,8 @@ fi
 
 ##----------------------------------------------------------------------------##
 
-# If pyenv has been loaded into environment
-if ! command -v pyenv > /dev/null 2>&1; then
+# Check if pyenv has been installed
+if brew list pyenv &> /dev/null; then
 
 	# Export primary pyenv directory
 	export PYENV_ROOT="${HOME}/.pyenv"
