@@ -90,5 +90,7 @@ ansible-playbook "./playbooks/[playbook].yml" -K --user "[mac_username]"
 
 * Activate licenses for the following
 	* [Sublime Text](https://www.sublimetext.com)
+	* [Audio Hijack](https://rogueamoeba.com/audiohijack), [Loopback](https://rogueamoeba.com/loopback), and [Fission](https://rogueamoeba.com/fission)
+		* Also install their kernel extension
 
 * Log into [Keybase](https://keybase.io) and register it
