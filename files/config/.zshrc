@@ -29,12 +29,6 @@ export EDITOR="vim"
 
 ##----------------------------------------------------------------------------##
 
-# Add for git GPG signing
-GPG_TTY="$(tty)"
-export GPG_TTY
-
-##----------------------------------------------------------------------------##
-
 # Big ZSH command history
 export HISTSIZE="10000000"
 export SAVEHIST="10000000"
@@ -69,11 +63,6 @@ export BAT_PAGER=
 # Make tabs four spaces
 export LESS="--tabs=4"
 tabs -4 &> /dev/null
-
-##----------------------------------------------------------------------------##
-
-# When making changes to GnuPG config
-alias restart-gpg="killall gpg-agent"
 
 ##----------------------------------------------------------------------------##
 
