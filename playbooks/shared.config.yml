@@ -1,6 +1,8 @@
 ---
 tasks_dir: "{{ playbook_dir }}/../tasks"
 
+default_path: "/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
 homebrew_installed_packages:
   - bash
   - bash-completion
@@ -9,17 +11,20 @@ homebrew_installed_packages:
   - bc
   - bcal
   - btop
+  - clipboard
   - cloc
   - cmatrix
   - colordiff
   - coreutils
   - curl
+  - dockutil
   - dos2unix
   - fd
   - fswatch
   - fzf
   - git
   - gnu-sed
+  - gnupg
   - hstr
   - htop
   - httpie
@@ -32,6 +37,7 @@ homebrew_installed_packages:
   - nmap
   - osx-cpu-temp
   - parallel
+  - pinentry-mac
   - pv
   - rename
   - ripgrep
@@ -46,7 +52,6 @@ homebrew_installed_packages:
   - yq
   - zsh
   - zsh-completions
-  - zsh-history-substring-search
   - zsh-syntax-highlighting
 
 homebrew_upgrade_all_packages: true
@@ -54,6 +59,47 @@ homebrew_upgrade_all_packages: true
 homebrew_taps: []
 
 homebrew_cask_apps:
+  - alfred
+  - appcleaner
+  - bartender
+  - bitwarden
+  - cleanshot
+  - disk-diet
+  - dockmate
+  - dropzone
+  - github
+  - imageoptim
+  - iterm2
+  - itsycal
+  - jiggler
+  - keybase
+  - logi-options-plus
+  - onyx
+  - pdf-squeezer
+  - raycast
+  - shottr
   - stats
   - sublime-text
+  - textsniper
+  - tg-pro
   - vlc
+  - yubico-authenticator
+
+linkfiles_repo_accept_hostkey: true
+
+linkfiles_paths:
+  - { src: "files/config/.gitconfig", dst: "~/.gitconfig" }
+  - { src: "files/config/.ssh", dst: "~/.ssh/config" }
+  - { src: "files/config/.vimrc", dst: "~/.vimrc" }
+  - { src: "files/config/.zshrc", dst: "~/.zshrc" }
+
+mas_installed_apps:
+  - { name: "iStatistica Pro", id: 1447778660 }
+  - { name: "Magnet", id: 441258766 }
+  - { name: "Xcode", id: 497799835 }
+
+mas_upgrade_all_apps: true
+
+dockutil_install: false
+dockitems_remove: []
+dockitems_persist: []

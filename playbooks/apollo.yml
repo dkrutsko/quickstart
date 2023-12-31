@@ -9,7 +9,18 @@
     - include_tasks: "{{ tasks_dir }}/merge-config.yml"
       vars:
         config_file: apollo
+      tags: [ "always" ]
 
   roles:
     - role: elliotweiser.osx-command-line-tools
     - role: geerlingguy.mac.homebrew
+      tags: [ "homebrew" ]
+    - role: linkfiles
+    - role: geerlingguy.mac.mas
+      environment:
+        PATH: "{{ default_path }}"
+      tags: [ "mas" ]
+    - role: geerlingguy.mac.dock
+      environment:
+        PATH: "{{ default_path }}"
+      tags: [ "dock" ]

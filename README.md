@@ -29,7 +29,7 @@ xcode-select --install
 
 * Install SSH key
 ```bash
-mkdir -p "$HOME/.ssh"; grep -qsF " dave" "$HOME/.ssh/authorized_keys" || curl -sS "https://github.com/dkrutsko.keys" | head -n 1 | sed "s/$/ dave\n/" >> "$HOME/.ssh/authorized_keys"
+mkdir -p "${HOME}/.ssh"; grep -qsF " dave" "${HOME}/.ssh/authorized_keys" || curl -sS "https://github.com/dkrutsko.keys" | head -n 1 | sed "s/$/ dave\n/" >> "${HOME}/.ssh/authorized_keys"
 ```
 
 ---
@@ -43,7 +43,7 @@ mkdir -p "$HOME/.ssh"; grep -qsF " dave" "$HOME/.ssh/authorized_keys" || curl -s
 	```
 	* Run the ping command to test the connectivity
 	```bash
-	ansible -m ping "[host]" --user "[mac_username]" --private-key "[ssh_key_file]"
+	ansible -m ping "[host]" --user "[mac_username]"
 	```
 
 * Install required Ansible roles
@@ -53,5 +53,42 @@ ansible-galaxy install -r "./requirements.yml"
 
 * Run desired Ansible playbook
 ```bash
-ansible-playbook "./playbooks/[playbook].yml" -K --user "[mac_username]" --private-key "[ssh_key_file]"
+ansible-playbook "./playbooks/[playbook].yml" -K --user "[mac_username]"
 ```
+
+* Remember to use `--tags` and `--skip-tags" for testing
+	* Common tags include: `homebrew`, `mas`, and `dock`
+	```bash
+	ansible-playbook ... --tags "tag1,tag2"
+	ansible-playbook ... --skip-tags "tag3"
+	```
+
+* Ansible might start to hang after installing Xcode
+	* Run this command on your Mac and try rerunning playbook
+	```bash
+	sudo xcodebuild -license accept
+	```
+	* If issue persists try running playbook in debug mode
+	```bash
+	ANSIBLE_DEBUG=1 ansible ... -vvvv
+	```
+
+---
+
+* From this point, finish off these steps manually
+
+* Install the following applications
+	* [MacUpdater](https://www.corecode.io/macupdater)
+	* [XtraFinder](https://www.trankynam.com/xtrafinder)
+		* If XtraFinder stops working, consider these alternatives
+		* [QSpace](https://qspace.awehunt.com/en-us/index.html)
+		* [TotalFinder](https://totalfinder.binaryage.com)
+	* [TinkerTool](https://www.bresink.com/osx/0TinkerTool/download.php)
+	* [Mercury] [Adobe CC](https://creativecloud.adobe.com/apps/download/creative-cloud)
+	* [Mercury] [Office 365](https://www.microsoft.com/en-us/microsoft-365/download-office)
+	* [Apollo] [VoiceMod](https://www.voicemod.net)
+
+* Activate licenses for the following
+	* [Sublime Text](https://www.sublimetext.com)
+
+* Log into [Keybase](https://keybase.io) and register it

@@ -1,0 +1,7 @@
+---
+linkfiles_repo: "https://github.com/dkrutsko/quickstart.git"
+linkfiles_repo_version: main
+linkfiles_repo_accept_hostkey: false
+linkfiles_repo_destination: "~/Documents/quickstart"
+
+linkfiles_paths: []

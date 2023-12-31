@@ -13,7 +13,6 @@ homebrew_installed_packages:
   - figlet
   - gdbm
   - gh
-  - gnupg
   - go
   - graphviz
   - grpcurl
@@ -21,7 +20,6 @@ homebrew_installed_packages:
   - helm
   - imagemagick
   - nvm
-  - pinentry-mac
   - pth
   - pyenv
   - pyenv-virtualenv
@@ -46,12 +44,63 @@ homebrew_taps:
   - teamookla/speedtest
 
 homebrew_cask_apps:
+  - arc
+  - balenaetcher
+  - beekeeper-studio
+  - beyond-compare
+  - blender
   - brave-browser
+  - charles
+  - connectmenow
+  - cyberduck
+  - db-browser-for-sqlite
+  - dbeaver-community
+  - default-folder-x
   - discord
   - firefox
+  - forklift
+  - gemini
+  - gitkraken
+  - goland
   - google-chrome
   - gpg-suite-no-mail
   - handbrake
+  - hex-fiend
+  - idafree
+  - key-codes
+  - lens
+  - little-snitch
+  - microsoft-edge
+  - microsoft-teams
   - netron
+  - obsidian
+  - orion
+  - postman
+  - qflipper
+  - rapidapi
+  - sdm
+  - sequel-pro
+  - sketch
+  - skype
   - slack
+  - tableplus
+  - topaz-denoise-ai
+  - topaz-gigapixel-ai
+  - topaz-sharpen-ai
+  - tuxera-ntfs
+  - visual-studio-code
+  - webstorm
+  - wireshark
   - zoom
+
+mas_installed_apps:
+  - { name: "Gifox 2", id: 1461845568 }
+  - { name: "iMazing Converter", id: 1292198261 }
+  - { name: "Pixelmator Pro", id: 1289583905 }
+  - { name: "WireGuard", id: 1451685025 }
+
+# TODO:
+dockitems_remove: []
+
+# TODO:
+dockitems_persist: []

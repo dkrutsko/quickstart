@@ -1,0 +1,32 @@
+---
+- name: Ensure the repository is cloned locally
+  git:
+    repo: "{{ linkfiles_repo }}"
+    dest: "{{ linkfiles_repo_destination }}"
+    version: "{{ linkfiles_repo_version }}"
+    accept_hostkey: "{{ linkfiles_repo_accept_hostkey }}"
+  become: false
+
+- name: Ensure all configured files are links
+  command: "ls -F {{ item.dst }}"
+  register: existing_linkfile_info
+  failed_when: false
+  check_mode: false
+  changed_when: false
+  loop: "{{ linkfiles_paths }}"
+
+- name: Remove existing files if a replacement is being linked
+  file:
+    path: "{{ item.item.dst }}"
+    state: absent
+  when: "'@' not in item.stdout"
+  loop: "{{ existing_linkfile_info.results }}"
+
+- name: Link files into target folder
+  file:
+    src: "{{ linkfiles_repo_destination }}/{{ item.src }}"
+    dest: "{{ item.dst }}"
+    state: link
+    mode: 0644
+  become: false
+  loop: "{{ linkfiles_paths }}"

@@ -9,3 +9,7 @@
     homebrew_installed_packages: "{{ homebrew_installed_packages | default([]) | union(dynamic_config.homebrew_installed_packages | default([])) }}"
     homebrew_taps: "{{ homebrew_taps | default([]) | union(dynamic_config.homebrew_taps | default([])) }}"
     homebrew_cask_apps: "{{ homebrew_cask_apps | default([]) | union(dynamic_config.homebrew_cask_apps | default([])) }}"
+    linkfiles_paths: "{{ linkfiles_paths | default([]) | union(dynamic_config.linkfiles_paths | default([])) }}"
+    mas_installed_apps: "{{ mas_installed_apps | default([]) | union(dynamic_config.mas_installed_apps | default([])) }}"
+    dockitems_remove: "{{ dockitems_remove | default([]) | union(dynamic_config.dockitems_remove | default([])) }}"
+    dockitems_persist: "{{ dockitems_persist | default([]) | union(dynamic_config.dockitems_persist | default([])) }}"
