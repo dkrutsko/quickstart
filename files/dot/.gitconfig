@@ -1,0 +1,31 @@
+[user]
+  name = David Krutsko
+  email = dave@krutsko.net
+  signingKey = BA290CC4B3A324607AFD4578B23C7AAF007BE840
+[core]
+  editor = vim
+  pager = less -R
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+[init]
+  defaultBranch = main
+[merge]
+  tool = kdiff3
+[difftool]
+  prompt = false
+[alias]
+  st = status
+  co = checkout
+  ci = commit
+  undo = reset --soft HEAD^
+[gpg]
+  program = /opt/homebrew/bin/gpg
+[commit]
+  gpgsign = true
+[tag]
+  forceSignAnnotated = true
+[url "git@github.com:"]
+  insteadOf = https://github.com/
