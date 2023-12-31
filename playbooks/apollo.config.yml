@@ -1,0 +1,9 @@
+---
+homebrew_installed_packages:
+  - yt-dlp
+
+homebrew_cask_apps:
+  - brave-browser
+  - discord
+  - slack
+  - zoom

@@ -1,0 +1,15 @@
+---
+- name: Provision Mercury
+  hosts: mercury
+
+  vars_files:
+    - shared.config.yml
+
+  pre_tasks:
+    - include_tasks: "{{ tasks_dir }}/merge-config.yml"
+      vars:
+        config_file: mercury
+
+  roles:
+    - role: elliotweiser.osx-command-line-tools
+    - role: geerlingguy.mac.homebrew

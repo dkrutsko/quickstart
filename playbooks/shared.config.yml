@@ -1,0 +1,59 @@
+---
+tasks_dir: "{{ playbook_dir }}/../tasks"
+
+homebrew_installed_packages:
+  - bash
+  - bash-completion
+  - bat
+  - bat-extras
+  - bc
+  - bcal
+  - btop
+  - cloc
+  - cmatrix
+  - colordiff
+  - coreutils
+  - curl
+  - dos2unix
+  - fd
+  - fswatch
+  - fzf
+  - git
+  - gnu-sed
+  - hstr
+  - htop
+  - httpie
+  - hyperfine
+  - iperf
+  - jq
+  - lsd
+  - ncdu
+  - neofetch
+  - nmap
+  - osx-cpu-temp
+  - parallel
+  - pv
+  - rename
+  - ripgrep
+  - rlwrap
+  - screenresolution
+  - tldr
+  - tree
+  - unison
+  - wget
+  - wrk
+  - xmlto
+  - yq
+  - zsh
+  - zsh-completions
+  - zsh-history-substring-search
+  - zsh-syntax-highlighting
+
+homebrew_upgrade_all_packages: true
+
+homebrew_taps: []
+
+homebrew_cask_apps:
+  - stats
+  - sublime-text
+  - vlc

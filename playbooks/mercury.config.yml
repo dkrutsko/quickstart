@@ -1,0 +1,57 @@
+---
+homebrew_installed_packages:
+  - asdf
+  - autoconf
+  - automake
+  - awscli
+  - bpython
+  - cffi
+  - cmake
+  - deno
+  - doxygen
+  - ffmpeg
+  - figlet
+  - gdbm
+  - gh
+  - gnupg
+  - go
+  - graphviz
+  - grpcurl
+  - guile
+  - helm
+  - imagemagick
+  - nvm
+  - pinentry-mac
+  - pth
+  - pyenv
+  - pyenv-virtualenv
+  - shared-mime-info
+  - shellcheck
+  - sphinx-doc
+  - sqlite
+  - ssh-copy-id
+  - starship
+  - tesseract
+  - yarn
+  - yt-dlp
+  - yubikey-agent
+  - hashicorp/tap/consul
+  - hashicorp/tap/packer
+  - hashicorp/tap/terraform
+  - hashicorp/tap/vault
+  - teamookla/speedtest/speedtest
+
+homebrew_taps:
+  - hashicorp/tap
+  - teamookla/speedtest
+
+homebrew_cask_apps:
+  - brave-browser
+  - discord
+  - firefox
+  - google-chrome
+  - gpg-suite-no-mail
+  - handbrake
+  - netron
+  - slack
+  - zoom

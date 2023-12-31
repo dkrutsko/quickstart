@@ -1,0 +1,11 @@
+---
+- name: Include configuration
+  include_vars:
+    file: "{{ playbook_dir }}/{{ config_file }}.config.yml"
+    name: dynamic_config
+
+- name: Merge Homebrew configs
+  set_fact:
+    homebrew_installed_packages: "{{ homebrew_installed_packages | default([]) | union(dynamic_config.homebrew_installed_packages | default([])) }}"
+    homebrew_taps: "{{ homebrew_taps | default([]) | union(dynamic_config.homebrew_taps | default([])) }}"
+    homebrew_cask_apps: "{{ homebrew_cask_apps | default([]) | union(dynamic_config.homebrew_cask_apps | default([])) }}"

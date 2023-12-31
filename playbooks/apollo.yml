@@ -1,0 +1,15 @@
+---
+- name: Provision Apollo
+  hosts: apollo
+
+  vars_files:
+    - shared.config.yml
+
+  pre_tasks:
+    - include_tasks: "{{ tasks_dir }}/merge-config.yml"
+      vars:
+        config_file: apollo
+
+  roles:
+    - role: elliotweiser.osx-command-line-tools
+    - role: geerlingguy.mac.homebrew
